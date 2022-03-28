@@ -1,0 +1,38 @@
+{
+  "applications": ["flux"],
+  "changelogDate": "20220328232226",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "person_company_history",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "min", "unique"],
+      "fieldValidateRulesMin": "1000"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "personId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "investor",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "founder",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PersonCompanyHistory",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

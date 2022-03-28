@@ -1,0 +1,57 @@
+{
+  "applications": ["flux"],
+  "changelogDate": "20220328230726",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "job",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "min", "unique"],
+      "fieldValidateRulesMin": "1000"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "jobPositionId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Job",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "job",
+      "relationshipName": "companyId",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "companyPosition",
+      "otherEntityRelationshipName": "job",
+      "relationshipName": "jobPositionId",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "job",
+      "relationshipName": "companyId",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "companyPosition",
+      "otherEntityRelationshipName": "job",
+      "relationshipName": "jobPositionId",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

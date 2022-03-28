@@ -1,0 +1,58 @@
+{
+  "applications": ["flux"],
+  "changelogDate": "20220328230526",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "opportunity",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "applyDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "contactSourceId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "processStageId",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Opportunity",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "opportunity",
+      "ownerSide": true,
+      "relationshipName": "companyId",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "contactSource",
+      "otherEntityRelationshipName": "opportunity",
+      "ownerSide": true,
+      "relationshipName": "contactSourceId",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "processStage",
+      "otherEntityRelationshipName": "opportunity",
+      "ownerSide": true,
+      "relationshipName": "processStageId",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

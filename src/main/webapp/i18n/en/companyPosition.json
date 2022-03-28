@@ -1,0 +1,25 @@
+{
+  "fluxApp": {
+    "companyPosition": {
+      "home": {
+        "title": "Company Positions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Company Position",
+        "createOrEditLabel": "Create or edit a Company Position",
+        "notFound": "No Company Positions found"
+      },
+      "created": "A new Company Position is created with identifier {{ param }}",
+      "updated": "A Company Position is updated with identifier {{ param }}",
+      "deleted": "A Company Position is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Company Position {{ id }}?"
+      },
+      "detail": {
+        "title": "Company Position"
+      },
+      "id": "Id",
+      "name": "Name",
+      "job": "Job"
+    }
+  }
+}

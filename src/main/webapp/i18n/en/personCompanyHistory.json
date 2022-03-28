@@ -1,0 +1,27 @@
+{
+  "fluxApp": {
+    "personCompanyHistory": {
+      "home": {
+        "title": "Person Company Histories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Person Company History",
+        "createOrEditLabel": "Create or edit a Person Company History",
+        "notFound": "No Person Company Histories found"
+      },
+      "created": "A new Person Company History is created with identifier {{ param }}",
+      "updated": "A Person Company History is updated with identifier {{ param }}",
+      "deleted": "A Person Company History is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Person Company History {{ id }}?"
+      },
+      "detail": {
+        "title": "Person Company History"
+      },
+      "id": "Id",
+      "companyId": "Company Id",
+      "personId": "Person Id",
+      "investor": "Investor",
+      "founder": "Founder"
+    }
+  }
+}

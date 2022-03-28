@@ -1,0 +1,25 @@
+{
+  "fluxApp": {
+    "founderPositions": {
+      "home": {
+        "title": "Founder Positions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Founder Positions",
+        "createOrEditLabel": "Create or edit a Founder Positions",
+        "notFound": "No Founder Positions found"
+      },
+      "created": "A new Founder Positions is created with identifier {{ param }}",
+      "updated": "A Founder Positions is updated with identifier {{ param }}",
+      "deleted": "A Founder Positions is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Founder Positions {{ id }}?"
+      },
+      "detail": {
+        "title": "Founder Positions"
+      },
+      "id": "Id",
+      "positionId": "Position Id",
+      "companyId": "Company Id"
+    }
+  }
+}

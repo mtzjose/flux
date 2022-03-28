@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Person.
+    -->
+    <changeSet id="20220328230326-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="school_id"
+                                 baseTableName="person"
+                                 constraintName="fk_person__school_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="school"/>
+
+        <addForeignKeyConstraint baseColumnNames="major_id"
+                                 baseTableName="person"
+                                 constraintName="fk_person__major_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="college_degree"/>
+
+        <addForeignKeyConstraint baseColumnNames="nationality_id_id"
+                                 baseTableName="person"
+                                 constraintName="fk_person__nationality_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="country"/>
+
+        <addForeignKeyConstraint baseColumnNames="gender_id_id"
+                                 baseTableName="person"
+                                 constraintName="fk_person__gender_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="gender"/>
+
+        <addForeignKeyConstraint baseColumnNames="pronoun_id_id"
+                                 baseTableName="person"
+                                 constraintName="fk_person__pronoun_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pronoun"/>
+
+        <addForeignKeyConstraint baseColumnNames="race_id_id"
+                                 baseTableName="person"
+                                 constraintName="fk_person__race_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="race"/>
+
+        <addForeignKeyConstraint baseColumnNames="address_id_id"
+                                 baseTableName="person"
+                                 constraintName="fk_person__address_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="address"/>
+    </changeSet>
+</databaseChangeLog>

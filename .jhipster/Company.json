@@ -1,0 +1,91 @@
+{
+  "applications": ["flux"],
+  "changelogDate": "20220328230426",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "company",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "min", "unique"],
+      "fieldValidateRulesMin": "1000"
+    },
+    {
+      "fieldName": "meta",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "logo",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "color",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "legalName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "oneLiner",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "foundingDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "socialLinks",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "addressId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "employeeRange",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Company",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "company",
+      "ownerSide": true,
+      "relationshipName": "addressId",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "employeeRange",
+      "otherEntityRelationshipName": "company",
+      "ownerSide": true,
+      "relationshipName": "employeeRange",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "job",
+      "otherEntityRelationshipName": "companyId",
+      "relationshipName": "job",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
