@@ -1,0 +1,38 @@
+{
+  "applications": ["flux"],
+  "changelogDate": "20220328232126",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "job_history",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "min", "unique"],
+      "fieldValidateRulesMin": "1000"
+    },
+    {
+      "fieldName": "jobId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "personId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "JobHistory",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

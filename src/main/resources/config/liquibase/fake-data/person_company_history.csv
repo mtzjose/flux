@@ -1,0 +1,11 @@
+id;company_id;person_id;investor;founder
+1;88988;10518;false;false
+2;87671;76444;true;true
+3;10292;75701;true;false
+4;51166;70599;true;true
+5;36528;39962;true;true
+6;43564;13543;false;false
+7;54794;77955;true;false
+8;59344;64403;true;true
+9;11687;94754;true;true
+10;68617;67778;true;true

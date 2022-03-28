@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Opportunity.
+    -->
+    <changeSet id="20220328230526-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="company_id_id"
+                                 baseTableName="opportunity"
+                                 constraintName="fk_opportunity__company_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+
+        <addForeignKeyConstraint baseColumnNames="contact_source_id_id"
+                                 baseTableName="opportunity"
+                                 constraintName="fk_opportunity__contact_source_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="contact_source"/>
+
+        <addForeignKeyConstraint baseColumnNames="process_stage_id_id"
+                                 baseTableName="opportunity"
+                                 constraintName="fk_opportunity__process_stage_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="process_stage"/>
+    </changeSet>
+</databaseChangeLog>

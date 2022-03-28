@@ -1,0 +1,24 @@
+{
+  "fluxApp": {
+    "pronoun": {
+      "home": {
+        "title": "Pronouns",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Pronoun",
+        "createOrEditLabel": "Create or edit a Pronoun",
+        "notFound": "No Pronouns found"
+      },
+      "created": "A new Pronoun is created with identifier {{ param }}",
+      "updated": "A Pronoun is updated with identifier {{ param }}",
+      "deleted": "A Pronoun is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pronoun {{ id }}?"
+      },
+      "detail": {
+        "title": "Pronoun"
+      },
+      "id": "Id",
+      "name": "Name"
+    }
+  }
+}

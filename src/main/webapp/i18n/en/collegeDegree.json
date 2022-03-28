@@ -1,0 +1,24 @@
+{
+  "fluxApp": {
+    "collegeDegree": {
+      "home": {
+        "title": "College Degrees",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new College Degree",
+        "createOrEditLabel": "Create or edit a College Degree",
+        "notFound": "No College Degrees found"
+      },
+      "created": "A new College Degree is created with identifier {{ param }}",
+      "updated": "A College Degree is updated with identifier {{ param }}",
+      "deleted": "A College Degree is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete College Degree {{ id }}?"
+      },
+      "detail": {
+        "title": "College Degree"
+      },
+      "id": "Id",
+      "name": "Name"
+    }
+  }
+}

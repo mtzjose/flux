@@ -1,0 +1,24 @@
+{
+  "fluxApp": {
+    "contactSource": {
+      "home": {
+        "title": "Contact Sources",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Contact Source",
+        "createOrEditLabel": "Create or edit a Contact Source",
+        "notFound": "No Contact Sources found"
+      },
+      "created": "A new Contact Source is created with identifier {{ param }}",
+      "updated": "A Contact Source is updated with identifier {{ param }}",
+      "deleted": "A Contact Source is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Contact Source {{ id }}?"
+      },
+      "detail": {
+        "title": "Contact Source"
+      },
+      "id": "Id",
+      "name": "Name"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "fluxApp": {
+    "employeeRange": {
+      "home": {
+        "title": "Employee Ranges",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Employee Range",
+        "createOrEditLabel": "Create or edit a Employee Range",
+        "notFound": "No Employee Ranges found"
+      },
+      "created": "A new Employee Range is created with identifier {{ param }}",
+      "updated": "A Employee Range is updated with identifier {{ param }}",
+      "deleted": "A Employee Range is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Employee Range {{ id }}?"
+      },
+      "detail": {
+        "title": "Employee Range"
+      },
+      "id": "Id",
+      "name": "Name"
+    }
+  }
+}

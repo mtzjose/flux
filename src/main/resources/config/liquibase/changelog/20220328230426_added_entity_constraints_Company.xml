@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Company.
+    -->
+    <changeSet id="20220328230426-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="address_id_id"
+                                 baseTableName="company"
+                                 constraintName="fk_company__address_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="address"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_range_id"
+                                 baseTableName="company"
+                                 constraintName="fk_company__employee_range_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee_range"/>
+    </changeSet>
+</databaseChangeLog>

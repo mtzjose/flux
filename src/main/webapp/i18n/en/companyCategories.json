@@ -1,0 +1,25 @@
+{
+  "fluxApp": {
+    "companyCategories": {
+      "home": {
+        "title": "Company Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Company Categories",
+        "createOrEditLabel": "Create or edit a Company Categories",
+        "notFound": "No Company Categories found"
+      },
+      "created": "A new Company Categories is created with identifier {{ param }}",
+      "updated": "A Company Categories is updated with identifier {{ param }}",
+      "deleted": "A Company Categories is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Company Categories {{ id }}?"
+      },
+      "detail": {
+        "title": "Company Categories"
+      },
+      "id": "Id",
+      "companyId": "Company Id",
+      "categoryId": "Category Id"
+    }
+  }
+}

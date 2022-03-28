@@ -1,0 +1,136 @@
+{
+  "applications": ["flux"],
+  "changelogDate": "20220328230326",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "person",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "min", "unique"],
+      "fieldValidateRulesMin": "1000"
+    },
+    {
+      "fieldName": "meta",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "profilePicture",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "firstname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "middlename",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bio",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "school",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "major",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "socialLinks",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "nationalityId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "genderId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "pronounId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "raceId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "addressId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "birthdate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Person",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "school",
+      "otherEntityRelationshipName": "person",
+      "ownerSide": true,
+      "relationshipName": "school",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "collegeDegree",
+      "otherEntityRelationshipName": "person",
+      "ownerSide": true,
+      "relationshipName": "major",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "country",
+      "otherEntityRelationshipName": "person",
+      "ownerSide": true,
+      "relationshipName": "nationalityId",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "gender",
+      "otherEntityRelationshipName": "person",
+      "ownerSide": true,
+      "relationshipName": "genderId",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "pronoun",
+      "otherEntityRelationshipName": "person",
+      "ownerSide": true,
+      "relationshipName": "pronounId",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "race",
+      "otherEntityRelationshipName": "person",
+      "ownerSide": true,
+      "relationshipName": "raceId",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "person",
+      "ownerSide": true,
+      "relationshipName": "addressId",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

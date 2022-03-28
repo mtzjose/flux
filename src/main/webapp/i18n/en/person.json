@@ -1,0 +1,45 @@
+{
+  "fluxApp": {
+    "person": {
+      "home": {
+        "title": "People",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Person",
+        "createOrEditLabel": "Create or edit a Person",
+        "notFound": "No People found"
+      },
+      "created": "A new Person is created with identifier {{ param }}",
+      "updated": "A Person is updated with identifier {{ param }}",
+      "deleted": "A Person is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Person {{ id }}?"
+      },
+      "detail": {
+        "title": "Person"
+      },
+      "id": "Id",
+      "meta": "Meta",
+      "profilePicture": "Profile Picture",
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "middlename": "Middlename",
+      "bio": "Bio",
+      "school": "School",
+      "major": "Major",
+      "socialLinks": "Social Links",
+      "nationalityId": "Nationality Id",
+      "genderId": "Gender Id",
+      "pronounId": "Pronoun Id",
+      "raceId": "Race Id",
+      "addressId": "Address Id",
+      "birthdate": "Birthdate",
+      "school": "School",
+      "major": "Major",
+      "nationalityId": "Nationality Id",
+      "genderId": "Gender Id",
+      "pronounId": "Pronoun Id",
+      "raceId": "Race Id",
+      "addressId": "Address Id"
+    }
+  }
+}

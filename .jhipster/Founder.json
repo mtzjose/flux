@@ -1,0 +1,27 @@
+{
+  "applications": ["flux"],
+  "changelogDate": "20220328230826",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "founder",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "min", "unique"],
+      "fieldValidateRulesMin": "1000"
+    },
+    {
+      "fieldName": "personId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Founder",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
