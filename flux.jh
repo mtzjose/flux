@@ -1,0 +1,210 @@
+
+application {
+  config {
+    baseName flux,
+    applicationType monolith,
+    packageName com.magma.flux,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework react
+  }
+  entities *
+}
+
+entity Person{
+    id	Long required min(1000) unique,
+    meta TextBlob,
+    profilePicture	ImageBlob,
+    firstname	String,
+    lastname	String,
+    middlename	String,
+    bio	TextBlob,
+    school Long,
+    major Long,
+    socialLinks TextBlob,
+    nationalityId	Long,
+    genderId	Long,
+    pronounId	Long,
+    raceId	Long,
+    addressId	Long,
+    birthdate LocalDate,
+}
+
+entity Company{
+	id	Long required min(1000) unique,
+    meta	TextBlob,
+    logo	ImageBlob,
+    color	String,
+    name	String,
+    legalName	String,
+    oneLiner	String,
+    description	TextBlob,
+    foundingDate	LocalDate,
+    socialLinks	TextBlob,
+    addressId	Long,
+    employeeRange Long
+}
+
+entity Opportunity{
+    id	Long,
+    companyId	Long,
+    applyDate	LocalDate,
+    contactSourceId	Long,
+    processStageId	Long
+}
+
+entity Address{
+	id	Long required min(1000) unique,
+	countryId	Long required,
+	cityId	Long required,
+    streetAddress String
+    postalCode String
+}
+
+entity Job{
+	id	Long required min(1000) unique,
+	companyId	Long required,
+	jobPositionId	Long required
+}
+
+entity Founder{
+	id	Long required min(1000) unique,
+	personId	Long required
+}
+
+entity CompanyPosition{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity City {
+	id Long required min(1000) unique, 
+    name String required
+}
+
+entity Country {
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity Gender{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity ProcessStage{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity CollegeDegree{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity Pronoun{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity School{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity Race{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity ContactSource{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity CompanyCategory{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity CompanyCategories{
+	id Long required min(1000) unique,
+    companyId Long required,
+    categoryId Long required
+}
+
+entity JobHistory {
+	id Long required min(1000) unique,
+	jobId Long,
+    personId Long,
+	startDate LocalDate,
+	endDate LocalDate
+}
+
+entity PersonCompanyHistory {
+	id Long required min(1000) unique,
+	companyId Long,
+    personId Long,
+	investor Boolean,
+	founder Boolean
+}
+
+entity EmployeeRange{
+	id Long required min(1000) unique,
+    name String required
+}
+
+entity FounderPositions{
+	id Long required min(1000) unique,
+    positionId Long,
+    companyId Long
+}
+
+relationship OneToOne {
+	Person{school} to School,
+    Person{major} to CollegeDegree,
+    Person{nationalityId} to Country,
+    Person{genderId} to Gender,
+    Person{pronounId} to Pronoun,
+    Person{raceId} to Race,
+    Person{addressId} to Address
+}
+
+relationship OneToOne {
+	Company{addressId} to Address,
+    Company{employeeRange} to EmployeeRange
+}
+
+relationship OneToOne {
+	Opportunity{companyId} to Company
+	Opportunity{contactSourceId} to ContactSource,
+    Opportunity{processStageId} to ProcessStage
+}
+
+relationship ManyToOne{
+	Job{companyId} to Company
+    Job{jobPositionId} to CompanyPosition
+}
+
+relationship OneToMany {
+	Company to Job{companyId}
+    CompanyPosition to Job{jobPositionId}
+}
+
+relationship ManyToMany {
+	Job{task(title)} to Task{job}
+}
+
+// Set pagination options
+paginate JobHistory with infinite-scroll /*, Employee with infinite-scroll*/
+paginate Job with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
+    
